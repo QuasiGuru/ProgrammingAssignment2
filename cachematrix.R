@@ -1,12 +1,12 @@
 ## The following fuctions return the inverse of a matrix
-## for a given matrix.  As well, the inverse is stored
-## in the cache
+## for a given matrix.  As well, the matrix and its
+## inverse are stored in the cache
 
 ## Function MakeCacheMatrix(x)
 ## ---------------------------
-## @param x -- A matrix
+## @param x -- A matrix (assumed to be valid)
 ##
-## This function creates a matrix that can cache
+## This function creates a special matrix that can cache
 ## its inverse.  This function returns a list
 ## containing a function to get and set the
 ## value of a matrix, and set and get the
@@ -39,7 +39,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## the matrix has already been calculated.  If so,
 ## the function retrieves the inverse and returns it.
 ## Otherwise, the function calculates the inverse of
-## the matrix, caches the inverse and returns it
+## the matrix, caches the matrix and its inverse and returns it
 
 cacheSolve <- function(x, ...) {
       m <- x$getinverse()
